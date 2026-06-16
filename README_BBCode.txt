@@ -2,6 +2,8 @@
 
 A lightweight mod that lets you [b]see, freeze, and set[/b] your total in-game play time — the value normally only visible on the save-slot screen.
 
+This mod is open source!  Check it out at [url=https://github.com/SirCabby/BlasphemousTimeManager]https://github.com/SirCabby/BlasphemousTimeManager[/url]
+
 [size=5][b]Features[/b][/size]
 [list]
 [*][b]Live overlay[/b] of your play time ([i]HH:MM:SS[/i]) in-game.
