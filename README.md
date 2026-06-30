@@ -27,7 +27,8 @@ Cheat Engine value scan never found it.
 
 - Game: Steam Blasphemous, Unity 2017.4 (**Mono CLR 2.0**) -> plugin targets **net35**.
 - Requires BepInEx 5.x (x64, Mono) installed in the game folder.
-- Set `<GameDir>` in `BlasTimeManager.csproj`, then `dotnet build -c Release`.
+- Copy `GameDir.local.props.example` to `GameDir.local.props` and set `<GameDir>`
+  to your install (this file is gitignored), then `dotnet build -c Release`.
 - Copy `bin/Release/BlasTimeManager.dll` to `Blasphemous/BepInEx/plugins/`.
 
 ## Controls (rebind in `BepInEx/config/local.blasphemous.timemanager.cfg`)

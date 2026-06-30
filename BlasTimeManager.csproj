@@ -1,5 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <!--
+    To point the build at YOUR install, copy GameDir.local.props.example to
+    GameDir.local.props and set <GameDir> there. GameDir.local.props is
+    gitignored, so your personal path never gets committed.
+  -->
+  <Import Project="GameDir.local.props" Condition="Exists('GameDir.local.props')" />
+
   <PropertyGroup>
     <!-- Game is Unity 2017.4 on Mono CLR 2.0 => plugins MUST target net35 -->
     <TargetFramework>net35</TargetFramework>
@@ -8,8 +15,9 @@
     <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 
-    <!-- ===== EDIT THIS ONE LINE to your install, then the rest follow ===== -->
-    <GameDir>C:\Program Files (x86)\Steam\steamapps\common\Blasphemous</GameDir>
+    <!-- Default/example install path. Don't edit this — override <GameDir> in
+         GameDir.local.props instead (see the comment at the top of this file). -->
+    <GameDir Condition="'$(GameDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Blasphemous</GameDir>
 
     <Managed>$(GameDir)\Blasphemous_Data\Managed</Managed>
     <BepInExCore>$(GameDir)\BepInEx\core</BepInExCore>
